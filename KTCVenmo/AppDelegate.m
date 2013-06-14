@@ -7,13 +7,32 @@
 //
 
 #import "AppDelegate.h"
-
+#import "IIViewDeckController.h"
+#import "MainViewController.h"
+#import "SettingsViewController.h"
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle: nil];
+    UIViewController *cvc = [storyboard instantiateViewControllerWithIdentifier:@"MainViewController"];
+    UIViewController *lvc = [storyboard instantiateViewControllerWithIdentifier:@"SettingsViewController"];
+
+    IIViewDeckController *deckController =  [[IIViewDeckController alloc] initWithCenterViewController:cvc
+                                                                                    leftViewController:lvc];
+    
+    
+    deckController.panningMode = IIViewDeckFullViewPanning;
+    deckController.leftSize = 70;
+    deckController.openSlideAnimationDuration = 0.20f; // In seconds
+    self.window.rootViewController = deckController;
+    self.window.backgroundColor = [UIColor whiteColor];
+    [self.window makeKeyAndVisible];
     return YES;
+    
 }
 							
 - (void)applicationWillResignActive:(UIApplication *)application

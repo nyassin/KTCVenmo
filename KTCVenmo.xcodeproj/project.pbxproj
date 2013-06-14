@@ -17,12 +17,19 @@
 		97D0B1A9176B7A1B00B89CD6 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 97D0B1A8176B7A1B00B89CD6 /* Default@2x.png */; };
 		97D0B1AB176B7A1B00B89CD6 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 97D0B1AA176B7A1B00B89CD6 /* Default-568h@2x.png */; };
 		97D0B1AE176B7A1B00B89CD6 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97D0B1AC176B7A1B00B89CD6 /* MainStoryboard.storyboard */; };
-		97D0B1B1176B7A1B00B89CD6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97D0B1B0176B7A1B00B89CD6 /* ViewController.m */; };
+		97D0B1B1176B7A1B00B89CD6 /* TutorialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97D0B1B0176B7A1B00B89CD6 /* TutorialViewController.m */; };
 		97D0B1B9176B7A1B00B89CD6 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97D0B1B8176B7A1B00B89CD6 /* SenTestingKit.framework */; };
 		97D0B1BA176B7A1B00B89CD6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97D0B194176B7A1B00B89CD6 /* UIKit.framework */; };
 		97D0B1BB176B7A1B00B89CD6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97D0B196176B7A1B00B89CD6 /* Foundation.framework */; };
 		97D0B1C3176B7A1B00B89CD6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 97D0B1C1176B7A1B00B89CD6 /* InfoPlist.strings */; };
 		97D0B1C6176B7A1B00B89CD6 /* KTCVenmoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 97D0B1C5176B7A1B00B89CD6 /* KTCVenmoTests.m */; };
+		97D0B1D4176B7E7900B89CD6 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97D0B1D3176B7E7900B89CD6 /* MainViewController.m */; };
+		97D0B1D7176B7FB100B89CD6 /* EnterNumberViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97D0B1D6176B7FB100B89CD6 /* EnterNumberViewController.m */; };
+		97D0B1DC176B8EF500B89CD6 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97D0B1DB176B8EF500B89CD6 /* QuartzCore.framework */; };
+		97D0B1E4176B8F7900B89CD6 /* IISideController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97D0B1DF176B8F7900B89CD6 /* IISideController.m */; };
+		97D0B1E5176B8F7900B89CD6 /* IIViewDeckController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97D0B1E1176B8F7900B89CD6 /* IIViewDeckController.m */; };
+		97D0B1E6176B8F7900B89CD6 /* IIWrapController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97D0B1E3176B8F7900B89CD6 /* IIWrapController.m */; };
+		97D0B1E9176B9E5500B89CD6 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97D0B1E8176B9E5500B89CD6 /* SettingsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,14 +57,27 @@
 		97D0B1A8176B7A1B00B89CD6 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		97D0B1AA176B7A1B00B89CD6 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		97D0B1AD176B7A1B00B89CD6 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		97D0B1AF176B7A1B00B89CD6 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		97D0B1B0176B7A1B00B89CD6 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		97D0B1AF176B7A1B00B89CD6 /* TutorialViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TutorialViewController.h; sourceTree = "<group>"; };
+		97D0B1B0176B7A1B00B89CD6 /* TutorialViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TutorialViewController.m; sourceTree = "<group>"; };
 		97D0B1B7176B7A1B00B89CD6 /* KTCVenmoTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KTCVenmoTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		97D0B1B8176B7A1B00B89CD6 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		97D0B1C0176B7A1B00B89CD6 /* KTCVenmoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "KTCVenmoTests-Info.plist"; sourceTree = "<group>"; };
 		97D0B1C2176B7A1B00B89CD6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		97D0B1C4176B7A1B00B89CD6 /* KTCVenmoTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KTCVenmoTests.h; sourceTree = "<group>"; };
 		97D0B1C5176B7A1B00B89CD6 /* KTCVenmoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KTCVenmoTests.m; sourceTree = "<group>"; };
+		97D0B1D2176B7E7900B89CD6 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		97D0B1D3176B7E7900B89CD6 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		97D0B1D5176B7FB100B89CD6 /* EnterNumberViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnterNumberViewController.h; sourceTree = "<group>"; };
+		97D0B1D6176B7FB100B89CD6 /* EnterNumberViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnterNumberViewController.m; sourceTree = "<group>"; };
+		97D0B1DB176B8EF500B89CD6 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		97D0B1DE176B8F7900B89CD6 /* IISideController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IISideController.h; sourceTree = "<group>"; };
+		97D0B1DF176B8F7900B89CD6 /* IISideController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IISideController.m; sourceTree = "<group>"; };
+		97D0B1E0176B8F7900B89CD6 /* IIViewDeckController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IIViewDeckController.h; sourceTree = "<group>"; };
+		97D0B1E1176B8F7900B89CD6 /* IIViewDeckController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IIViewDeckController.m; sourceTree = "<group>"; };
+		97D0B1E2176B8F7900B89CD6 /* IIWrapController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IIWrapController.h; sourceTree = "<group>"; };
+		97D0B1E3176B8F7900B89CD6 /* IIWrapController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IIWrapController.m; sourceTree = "<group>"; };
+		97D0B1E7176B9E5500B89CD6 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		97D0B1E8176B9E5500B89CD6 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				97D0B1DC176B8EF500B89CD6 /* QuartzCore.framework in Frameworks */,
 				97D0B195176B7A1B00B89CD6 /* UIKit.framework in Frameworks */,
 				97D0B197176B7A1B00B89CD6 /* Foundation.framework in Frameworks */,
 				97D0B199176B7A1B00B89CD6 /* CoreGraphics.framework in Frameworks */,
@@ -106,6 +127,7 @@
 		97D0B193176B7A1B00B89CD6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				97D0B1DB176B8EF500B89CD6 /* QuartzCore.framework */,
 				97D0B194176B7A1B00B89CD6 /* UIKit.framework */,
 				97D0B196176B7A1B00B89CD6 /* Foundation.framework */,
 				97D0B198176B7A1B00B89CD6 /* CoreGraphics.framework */,
@@ -117,12 +139,19 @@
 		97D0B19A176B7A1B00B89CD6 /* KTCVenmo */ = {
 			isa = PBXGroup;
 			children = (
+				97D0B1DD176B8F7800B89CD6 /* ViewDeck */,
 				97D0B1A3176B7A1B00B89CD6 /* AppDelegate.h */,
 				97D0B1A4176B7A1B00B89CD6 /* AppDelegate.m */,
 				97D0B1AC176B7A1B00B89CD6 /* MainStoryboard.storyboard */,
-				97D0B1AF176B7A1B00B89CD6 /* ViewController.h */,
-				97D0B1B0176B7A1B00B89CD6 /* ViewController.m */,
+				97D0B1D5176B7FB100B89CD6 /* EnterNumberViewController.h */,
+				97D0B1D6176B7FB100B89CD6 /* EnterNumberViewController.m */,
+				97D0B1D2176B7E7900B89CD6 /* MainViewController.h */,
+				97D0B1D3176B7E7900B89CD6 /* MainViewController.m */,
+				97D0B1AF176B7A1B00B89CD6 /* TutorialViewController.h */,
+				97D0B1B0176B7A1B00B89CD6 /* TutorialViewController.m */,
 				97D0B19B176B7A1B00B89CD6 /* Supporting Files */,
+				97D0B1E7176B9E5500B89CD6 /* SettingsViewController.h */,
+				97D0B1E8176B9E5500B89CD6 /* SettingsViewController.m */,
 			);
 			path = KTCVenmo;
 			sourceTree = "<group>";
@@ -158,6 +187,19 @@
 				97D0B1C1176B7A1B00B89CD6 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		97D0B1DD176B8F7800B89CD6 /* ViewDeck */ = {
+			isa = PBXGroup;
+			children = (
+				97D0B1DE176B8F7900B89CD6 /* IISideController.h */,
+				97D0B1DF176B8F7900B89CD6 /* IISideController.m */,
+				97D0B1E0176B8F7900B89CD6 /* IIViewDeckController.h */,
+				97D0B1E1176B8F7900B89CD6 /* IIViewDeckController.m */,
+				97D0B1E2176B8F7900B89CD6 /* IIWrapController.h */,
+				97D0B1E3176B8F7900B89CD6 /* IIWrapController.m */,
+			);
+			path = ViewDeck;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -272,7 +314,13 @@
 			files = (
 				97D0B1A1176B7A1B00B89CD6 /* main.m in Sources */,
 				97D0B1A5176B7A1B00B89CD6 /* AppDelegate.m in Sources */,
-				97D0B1B1176B7A1B00B89CD6 /* ViewController.m in Sources */,
+				97D0B1B1176B7A1B00B89CD6 /* TutorialViewController.m in Sources */,
+				97D0B1D4176B7E7900B89CD6 /* MainViewController.m in Sources */,
+				97D0B1D7176B7FB100B89CD6 /* EnterNumberViewController.m in Sources */,
+				97D0B1E4176B8F7900B89CD6 /* IISideController.m in Sources */,
+				97D0B1E5176B8F7900B89CD6 /* IIViewDeckController.m in Sources */,
+				97D0B1E6176B8F7900B89CD6 /* IIWrapController.m in Sources */,
+				97D0B1E9176B9E5500B89CD6 /* SettingsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

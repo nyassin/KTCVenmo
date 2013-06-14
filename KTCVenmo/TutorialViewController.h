@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface TutorialViewController : UIViewController
 
+@property (strong, nonatomic) IBOutlet UIScrollView *scrollview;
 @end
