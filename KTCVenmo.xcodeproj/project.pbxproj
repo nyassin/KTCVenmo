@@ -30,6 +30,7 @@
 		97D0B1E5176B8F7900B89CD6 /* IIViewDeckController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97D0B1E1176B8F7900B89CD6 /* IIViewDeckController.m */; };
 		97D0B1E6176B8F7900B89CD6 /* IIWrapController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97D0B1E3176B8F7900B89CD6 /* IIWrapController.m */; };
 		97D0B1E9176B9E5500B89CD6 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97D0B1E8176B9E5500B89CD6 /* SettingsViewController.m */; };
+		97D0B1EB176BBF9400B89CD6 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97D0B1EA176BBF9400B89CD6 /* Security.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +79,8 @@
 		97D0B1E3176B8F7900B89CD6 /* IIWrapController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IIWrapController.m; sourceTree = "<group>"; };
 		97D0B1E7176B9E5500B89CD6 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
 		97D0B1E8176B9E5500B89CD6 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		97D0B1EA176BBF9400B89CD6 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		97D0B2BD176BC18600B89CD6 /* Venmo.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = Venmo.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				97D0B1EB176BBF9400B89CD6 /* Security.framework in Frameworks */,
 				97D0B1DC176B8EF500B89CD6 /* QuartzCore.framework in Frameworks */,
 				97D0B195176B7A1B00B89CD6 /* UIKit.framework in Frameworks */,
 				97D0B197176B7A1B00B89CD6 /* Foundation.framework in Frameworks */,
@@ -127,6 +131,8 @@
 		97D0B193176B7A1B00B89CD6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				97D0B2B8176BC18600B89CD6 /* Libraries */,
+				97D0B1EA176BBF9400B89CD6 /* Security.framework */,
 				97D0B1DB176B8EF500B89CD6 /* QuartzCore.framework */,
 				97D0B194176B7A1B00B89CD6 /* UIKit.framework */,
 				97D0B196176B7A1B00B89CD6 /* Foundation.framework */,
@@ -202,6 +208,51 @@
 			path = ViewDeck;
 			sourceTree = "<group>";
 		};
+		97D0B2B8176BC18600B89CD6 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				97D0B2B9176BC18600B89CD6 /* Venmo */,
+			);
+			path = Libraries;
+			sourceTree = SOURCE_ROOT;
+		};
+		97D0B2B9176BC18600B89CD6 /* Venmo */ = {
+			isa = PBXGroup;
+			children = (
+				97D0B2BA176BC18600B89CD6 /* Libraries */,
+				97D0B2BD176BC18600B89CD6 /* Venmo.xcodeproj */,
+			);
+			path = Venmo;
+			sourceTree = "<group>";
+		};
+		97D0B2BA176BC18600B89CD6 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				97D0B2BB176BC18600B89CD6 /* JSONKit */,
+				97D0B2BC176BC18600B89CD6 /* Kiwi */,
+			);
+			path = Libraries;
+			sourceTree = "<group>";
+		};
+		97D0B2BB176BC18600B89CD6 /* JSONKit */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = JSONKit;
+			sourceTree = "<group>";
+		};
+		97D0B2BC176BC18600B89CD6 /* Kiwi */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Kiwi;
+			sourceTree = "<group>";
+		};
+		97D0B2BE176BC18600B89CD6 /* Products */ = {
+			isa = PBXGroup;
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -260,6 +311,12 @@
 			mainGroup = 97D0B188176B7A1B00B89CD6;
 			productRefGroup = 97D0B192176B7A1B00B89CD6 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 97D0B2BE176BC18600B89CD6 /* Products */;
+					ProjectRef = 97D0B2BD176BC18600B89CD6 /* Venmo.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				97D0B190176B7A1B00B89CD6 /* KTCVenmo */,
