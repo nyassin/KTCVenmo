@@ -97,6 +97,7 @@ BOOL settingsButtonClicked;
     double donationAmount = [paymentAmount doubleValue];
     donationAmount = fmod(donationAmount, 1.00);
     donationAmount = 1 - donationAmount;
+    donationAmount = donationAmount*-1;
     NSString *donationAmountStringFormat = [NSString stringWithFormat:@"%2f", donationAmount];
     _donationAmount.text = (NSString *)donationAmountStringFormat;
     
@@ -104,30 +105,18 @@ BOOL settingsButtonClicked;
 }
 -(IBAction)completeCharge:(id)sender {
     
-//    NSString *accessToken = "cZh3NYA7NQVQxhLdD757nFuSnG7mLV3s";
-//    
-//    NSString *urlString = [NSString stringWithFormat:@"http://fathomless-citadel-8757.herokuapp.com/?cat=%@&time=%d",categoryChoice,self.timeInterval];
-//    
-//    NSLog(@"%@",urlString);
-//    
-//    NSURL *url = [[NSURL alloc] initWithString:urlString];
-//    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url];
-//    
-//    AFJSONRequestOperation *operation =
-//    [AFJSONRequestOperation
-//     JSONRequestOperationWithRequest:request
-//     success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON){
-//         
-//         
-//     } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON){
-//         [MBProgressHUD hideHUDForView:self.view animated:YES];
-//         //        [delegate.window.viewForBaselineLayout setUserInteractionEnabled:YES];
-//         NSLog(@"%@", error.localizedDescription);
-//     }];
-//    
-//    [operation start];
-//    
-//    NSLog(@"Request Start");
-
+    NSString *accessToken = @"cZh3NYA7NQVQxhLdD757nFuSnG7mLV3s";
+    NSString *urlString = [NSString stringWithFormat:@"https://api.venmo.com/payments"];
+    NSURL *url = [[NSURL alloc] initWithString:urlString];
+    NSString *params = [[NSString alloc] initWithFormat:@"access_token=%@&phone=%@&amount=%@&note=test", accessToken, @"7734901404",@"-0.1"];
+    
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url];
+    [request setHTTPMethod:@"POST"];
+    [request setHTTPBody:[params dataUsingEncoding:NSUTF8StringEncoding]];
+    (void)[[NSURLConnection alloc] initWithRequest:request delegate:self];
+    
+}
+-(void)connectionDidFinishLoading:(NSURLConnection *)connection {
+    NSLog(@"%@", connection);
 }
 @end
