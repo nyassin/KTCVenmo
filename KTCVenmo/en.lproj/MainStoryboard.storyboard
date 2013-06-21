@@ -121,7 +121,7 @@
                         <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IWT-MS-9s8">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="You Will Pay" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IWT-MS-9s8">
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -136,6 +136,10 @@
                                 </items>
                             </toolbar>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ugD-FF-qr3">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="302" id="N7R-Jh-qGK"/>
+                                    <constraint firstAttribute="height" constant="44" id="qiU-YW-wlM"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Launch Venmo App">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -148,21 +152,80 @@
                                     <action selector="launchVenmoClient:" destination="nFH-Yy-R8s" eventType="touchUpInside" id="2vb-De-DGc"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VBl-xS-ard">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="81" id="Kek-mg-qfa"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="To" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qwL-pL-1ul">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="63" id="Duc-eL-y6N"/>
+                                    <constraint firstAttribute="height" constant="34" id="UjP-Bu-WpZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MGc-dI-5tR">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="CYr-L2-JIl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Choose Destination">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WjU-5K-OYg">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Complete My Charge">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="completeCharge:" destination="nFH-Yy-R8s" eventType="touchUpInside" id="sXJ-G9-Y6d"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="You Will Pay" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ay6-i7-SHA">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="MGc-dI-5tR" firstAttribute="leading" secondItem="MQa-ak-3Cf" secondAttribute="leading" constant="89" id="4Ce-zL-xYH"/>
+                            <constraint firstAttribute="bottom" secondItem="WjU-5K-OYg" secondAttribute="bottom" constant="43" id="8D9-PP-Qfl"/>
+                            <constraint firstItem="ugD-FF-qr3" firstAttribute="top" secondItem="IWT-MS-9s8" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="9Vi-QT-rOP"/>
                             <constraint firstItem="rPq-KD-VUm" firstAttribute="leading" secondItem="MQa-ak-3Cf" secondAttribute="leading" type="default" id="D25-xB-YNe"/>
+                            <constraint firstItem="WjU-5K-OYg" firstAttribute="centerX" secondItem="ugD-FF-qr3" secondAttribute="centerX" type="default" id="EVa-yd-itI"/>
                             <constraint firstItem="rPq-KD-VUm" firstAttribute="trailing" secondItem="MQa-ak-3Cf" secondAttribute="trailing" type="default" id="Eq6-J2-XWu"/>
-                            <constraint firstItem="IWT-MS-9s8" firstAttribute="top" secondItem="MQa-ak-3Cf" secondAttribute="top" constant="53" id="G7S-1a-jV5"/>
-                            <constraint firstItem="ugD-FF-qr3" firstAttribute="centerX" secondItem="rPq-KD-VUm" secondAttribute="centerX" type="default" id="IFt-kK-QGm"/>
-                            <constraint firstAttribute="bottom" secondItem="ugD-FF-qr3" secondAttribute="bottom" constant="140" id="SKj-xR-ykT"/>
+                            <constraint firstItem="MGc-dI-5tR" firstAttribute="baseline" secondItem="qwL-pL-1ul" secondAttribute="baseline" type="default" id="Foq-KF-vwF"/>
+                            <constraint firstItem="MGc-dI-5tR" firstAttribute="trailing" secondItem="VBl-xS-ard" secondAttribute="trailing" type="default" id="QYI-xZ-MxB"/>
+                            <constraint firstItem="ay6-i7-SHA" firstAttribute="baseline" secondItem="VBl-xS-ard" secondAttribute="baseline" type="default" id="Urn-cZ-Xx4"/>
+                            <constraint firstAttribute="bottom" secondItem="MGc-dI-5tR" secondAttribute="bottom" constant="185" id="VwL-aQ-cvY"/>
                             <constraint firstItem="rPq-KD-VUm" firstAttribute="top" secondItem="MQa-ak-3Cf" secondAttribute="top" type="default" id="XCb-bS-tKM"/>
-                            <constraint firstAttribute="trailing" secondItem="IWT-MS-9s8" secondAttribute="trailing" constant="105" id="enS-Jv-E4h"/>
+                            <constraint firstItem="IWT-MS-9s8" firstAttribute="centerX" secondItem="rPq-KD-VUm" secondAttribute="centerX" type="default" id="b5P-xX-42K"/>
+                            <constraint firstItem="IWT-MS-9s8" firstAttribute="centerX" secondItem="ugD-FF-qr3" secondAttribute="centerX" type="default" id="eQl-M8-YYH"/>
+                            <constraint firstItem="MGc-dI-5tR" firstAttribute="top" secondItem="qwL-pL-1ul" secondAttribute="top" type="default" id="eaP-4k-IY7"/>
+                            <constraint firstItem="VBl-xS-ard" firstAttribute="top" secondItem="MQa-ak-3Cf" secondAttribute="top" constant="166" id="fWR-Ua-Kyc"/>
+                            <constraint firstItem="IWT-MS-9s8" firstAttribute="top" secondItem="MQa-ak-3Cf" secondAttribute="top" constant="50" id="pdq-Af-4UJ"/>
+                            <constraint firstItem="ay6-i7-SHA" firstAttribute="leading" secondItem="MQa-ak-3Cf" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="wVl-C6-D2Y"/>
+                            <constraint firstItem="qwL-pL-1ul" firstAttribute="leading" secondItem="MQa-ak-3Cf" secondAttribute="leading" constant="30" id="xOL-Sg-UXP"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
-                        <outlet property="show_number" destination="IWT-MS-9s8" id="v8J-l1-PRY"/>
+                        <outlet property="donationAmount" destination="VBl-xS-ard" id="Hn0-mM-HVw"/>
+                        <outlet property="showNumber" destination="IWT-MS-9s8" id="ZeQ-Vw-oqi"/>
                         <segue destination="2" kind="modal" identifier="backToTutorialPage" id="cvX-X5-XhZ"/>
                     </connections>
                 </viewController>
@@ -217,6 +280,40 @@
             <point key="canvasLocation" x="-267" y="-108"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="EnterNumberViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/EnterNumberViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="signUpButtonClicked:"/>
+                <relationship kind="outlet" name="enterNumberTextField" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="MainViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MainViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="completeCharge:"/>
+                <relationship kind="action" name="launchVenmoClient:"/>
+                <relationship kind="action" name="settingsView:"/>
+                <relationship kind="outlet" name="donationAmount" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="showNumber" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="SettingsViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SettingsViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="removePhoneNumberAndLogOut:"/>
+            </relationships>
+        </class>
+        <class className="TutorialViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TutorialViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="scrollview" candidateClass="UIScrollView"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

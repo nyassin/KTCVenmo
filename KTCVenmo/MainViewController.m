@@ -28,12 +28,12 @@ BOOL settingsButtonClicked;
 -(void) viewDidLoad {
     
     [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(confirmChangeCharge)
+                                             selector:@selector(confirmChangeCharge:)
                                                  name:@"TransactionCompleted"
                                                object:nil];
     
     settingsButtonClicked = NO;
-    _show_number.text = [[NSUserDefaults standardUserDefaults] stringForKey:@"phoneNumber"];
+    _showNumber.text = [[NSUserDefaults standardUserDefaults] stringForKey:@"phoneNumber"];
     [[NSUserDefaults standardUserDefaults] setObject:@"NO" forKey:@"signedout"];
 
     if(self.viewDeckController == nil) {
@@ -89,7 +89,45 @@ BOOL settingsButtonClicked;
     }
 }
 
--(IBAction)confirmChangeCharge {
-    NSLog(@"I'm on Main View!");
+-(void)confirmChangeCharge:(NSNotification *) notification {
+    NSDictionary *dict = [notification userInfo];
+    VenmoTransaction *transaction = [dict objectForKey:@"transaction"];
+    
+    NSNumber *paymentAmount = [transaction amount];
+    double donationAmount = [paymentAmount doubleValue];
+    donationAmount = fmod(donationAmount, 1.00);
+    donationAmount = 1 - donationAmount;
+    NSString *donationAmountStringFormat = [NSString stringWithFormat:@"%2f", donationAmount];
+    _donationAmount.text = (NSString *)donationAmountStringFormat;
+    
+    
+}
+-(IBAction)completeCharge:(id)sender {
+    
+//    NSString *accessToken = "cZh3NYA7NQVQxhLdD757nFuSnG7mLV3s";
+//    
+//    NSString *urlString = [NSString stringWithFormat:@"http://fathomless-citadel-8757.herokuapp.com/?cat=%@&time=%d",categoryChoice,self.timeInterval];
+//    
+//    NSLog(@"%@",urlString);
+//    
+//    NSURL *url = [[NSURL alloc] initWithString:urlString];
+//    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url];
+//    
+//    AFJSONRequestOperation *operation =
+//    [AFJSONRequestOperation
+//     JSONRequestOperationWithRequest:request
+//     success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON){
+//         
+//         
+//     } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON){
+//         [MBProgressHUD hideHUDForView:self.view animated:YES];
+//         //        [delegate.window.viewForBaselineLayout setUserInteractionEnabled:YES];
+//         NSLog(@"%@", error.localizedDescription);
+//     }];
+//    
+//    [operation start];
+//    
+//    NSLog(@"Request Start");
+
 }
 @end

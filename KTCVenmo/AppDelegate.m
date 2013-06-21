@@ -73,21 +73,13 @@
         return [_venmoClient openURL:url
                    completionHandler:^(VenmoTransaction *transaction, NSError *error) {
                        if (transaction) {
-                           [[NSNotificationCenter defaultCenter] postNotificationName:@"TransactionCompleted"
-                                                                               object:nil];
-                           NSString *success = (transaction.success ? @"Success" : @"Failure");
-                           NSString *title = [@"Transaction " stringByAppendingString:success];
-                           UIAlertView *alertView = [[UIAlertView alloc]
-                                                     initWithTitle:title
-                                                     message:nil
-                                                     delegate:self
-                                                     cancelButtonTitle:@"OK"
-                                                     otherButtonTitles:nil];
+                           
+                           NSMutableDictionary* userInfo = [NSMutableDictionary dictionaryWithCapacity:1];
+                           [userInfo setObject:transaction forKey:@"transaction"];
 
-                           [alertView performSelectorOnMainThread:@selector(show)
-                                                       withObject:nil
-                                                    waitUntilDone:NO];
-                       } else { // error
+                           [[NSNotificationCenter defaultCenter] postNotificationName:@"TransactionCompleted"
+                                                                               object:self userInfo:userInfo];
+                        } else { // error
                            UIAlertView *alertView = [[UIAlertView alloc]
                                                      initWithTitle:@"Error"
                                                      message:@"Check Venmo App to see if transaction went through"

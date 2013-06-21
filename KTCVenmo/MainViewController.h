@@ -10,11 +10,17 @@
 #import <Venmo/Venmo.h>
 @interface MainViewController : UIViewController
 
-@property (strong, nonatomic) IBOutlet UILabel *show_number;
-
+@property (strong, nonatomic) IBOutlet UILabel *showNumber;
+@property (strong, nonatomic) IBOutlet UITextField *donationAmount;
 @property (strong, nonatomic) UIWindow *window;
 @property (strong, nonatomic) VenmoClient *venmoClient;
 
+
+
+-(IBAction)completeCharge:(id)sender;
 -(IBAction)launchVenmoClient:(id)sender;
 -(IBAction)settingsView:(id)sender;
+
+
+
 @end
