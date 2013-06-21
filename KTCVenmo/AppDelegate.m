@@ -10,6 +10,8 @@
 #import "IIViewDeckController.h"
 #import "MainViewController.h"
 #import "SettingsViewController.h"
+#import "KTCVenmoClient.h"
+
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -61,5 +63,47 @@
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
+
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url
+  sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+    
+    if([sourceApplication isEqualToString:@"net.kortina.labs.Venmo"]) {
+        
+        _venmoClient = [KTCVenmoClient sharedVenmoClient];
+        return [_venmoClient openURL:url
+                   completionHandler:^(VenmoTransaction *transaction, NSError *error) {
+                       if (transaction) {
+                           [[NSNotificationCenter defaultCenter] postNotificationName:@"TransactionCompleted"
+                                                                               object:nil];
+                           NSString *success = (transaction.success ? @"Success" : @"Failure");
+                           NSString *title = [@"Transaction " stringByAppendingString:success];
+                           UIAlertView *alertView = [[UIAlertView alloc]
+                                                     initWithTitle:title
+                                                     message:nil
+                                                     delegate:self
+                                                     cancelButtonTitle:@"OK"
+                                                     otherButtonTitles:nil];
+
+                           [alertView performSelectorOnMainThread:@selector(show)
+                                                       withObject:nil
+                                                    waitUntilDone:NO];
+                       } else { // error
+                           UIAlertView *alertView = [[UIAlertView alloc]
+                                                     initWithTitle:@"Error"
+                                                     message:@"Check Venmo App to see if transaction went through"
+                                                     delegate:self
+                                                     cancelButtonTitle:@"Dismiss"
+                                                     otherButtonTitles:nil];
+                           
+                           [alertView performSelectorOnMainThread:@selector(show)
+                                                       withObject:nil
+                                                    waitUntilDone:NO];
+                       }
+                   }];
+    }
+    
+    return NO;
+}
+
 
 @end

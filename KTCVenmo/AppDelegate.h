@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import <Venmo/Venmo.h>
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+@property (strong, nonatomic) VenmoClient *venmoClient;
 
 @end

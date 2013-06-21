@@ -8,6 +8,8 @@
 
 #import "MainViewController.h"
 #import "IIViewDeckController.h"
+#import "KTCVenmoClient.h"
+#import <Venmo/Venmo.h>
 
 BOOL settingsButtonClicked;
 @implementation MainViewController
@@ -24,6 +26,12 @@ BOOL settingsButtonClicked;
     }
 }
 -(void) viewDidLoad {
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(confirmChangeCharge)
+                                                 name:@"TransactionCompleted"
+                                               object:nil];
+    
     settingsButtonClicked = NO;
     _show_number.text = [[NSUserDefaults standardUserDefaults] stringForKey:@"phoneNumber"];
     [[NSUserDefaults standardUserDefaults] setObject:@"NO" forKey:@"signedout"];
@@ -60,5 +68,28 @@ BOOL settingsButtonClicked;
         [self performSegueWithIdentifier:@"backToTutorialPage" sender:nil];
            
     }
+}
+
+-(IBAction)launchVenmoClient:(id)sender {
+    _venmoClient = [KTCVenmoClient sharedVenmoClient];
+    VenmoTransaction *transaction = [[VenmoTransaction alloc] init];
+    transaction.note = @"Charity!";
+    transaction.toUserHandle = @"VenmoChairty";
+    VenmoViewController *venmoViewController = [_venmoClient viewControllerWithTransaction:transaction forceWeb:NO];
+    
+    if(venmoViewController) {
+        UIAlertView *no_app_alert = [[UIAlertView alloc]
+                                     initWithTitle:@"No app found"
+                                     message:@"Please install Venmo app first to proceed"
+                                     delegate:nil
+                                     cancelButtonTitle:@"Dismiss"
+                                     otherButtonTitles:nil];
+        
+        [no_app_alert show];
+    }
+}
+
+-(IBAction)confirmChangeCharge {
+    NSLog(@"I'm on Main View!");
 }
 @end

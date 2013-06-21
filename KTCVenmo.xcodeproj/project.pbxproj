@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		975184031774C24000FC860E /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 975183C21774C24000FC860E /* .gitignore */; };
+		975184041774C24000FC860E /* .gitmodules in Resources */ = {isa = PBXBuildFile; fileRef = 975183C31774C24000FC860E /* .gitmodules */; };
+		975184051774C24000FC860E /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 975183C71774C24000FC860E /* README.md */; };
+		975184141774C24000FC860E /* VenmoApp-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 975183F31774C24000FC860E /* VenmoApp-Info.plist */; };
+		9751842D1774C7A600FC860E /* libVenmo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9751842C1774C7A600FC860E /* libVenmo.a */; };
+		975184361774CAB500FC860E /* KTCVenmoClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 975184351774CAB500FC860E /* KTCVenmoClient.m */; };
 		97D0B195176B7A1B00B89CD6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97D0B194176B7A1B00B89CD6 /* UIKit.framework */; };
 		97D0B197176B7A1B00B89CD6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97D0B196176B7A1B00B89CD6 /* Foundation.framework */; };
 		97D0B199176B7A1B00B89CD6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97D0B198176B7A1B00B89CD6 /* CoreGraphics.framework */; };
@@ -44,6 +50,61 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		975183C21774C24000FC860E /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		975183C31774C24000FC860E /* .gitmodules */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitmodules; sourceTree = "<group>"; };
+		975183C71774C24000FC860E /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		975183CA1774C24000FC860E /* NSBundle+Venmo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+Venmo.h"; sourceTree = "<group>"; };
+		975183CB1774C24000FC860E /* NSBundle+Venmo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+Venmo.m"; sourceTree = "<group>"; };
+		975183CC1774C24000FC860E /* NSDictionary+Venmo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Venmo.h"; sourceTree = "<group>"; };
+		975183CD1774C24000FC860E /* NSDictionary+Venmo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Venmo.m"; sourceTree = "<group>"; };
+		975183CE1774C24000FC860E /* NSError+Venmo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSError+Venmo.h"; sourceTree = "<group>"; };
+		975183CF1774C24000FC860E /* NSError+Venmo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSError+Venmo.m"; sourceTree = "<group>"; };
+		975183D01774C24000FC860E /* NSString+Venmo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Venmo.h"; sourceTree = "<group>"; };
+		975183D11774C24000FC860E /* NSString+Venmo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Venmo.m"; sourceTree = "<group>"; };
+		975183D21774C24000FC860E /* NSURL+Venmo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+Venmo.h"; sourceTree = "<group>"; };
+		975183D31774C24000FC860E /* NSURL+Venmo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+Venmo.m"; sourceTree = "<group>"; };
+		975183D41774C24000FC860E /* VenmoActivityView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VenmoActivityView.m; sourceTree = "<group>"; };
+		975183D51774C24000FC860E /* VenmoActivityView_Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VenmoActivityView_Internal.h; sourceTree = "<group>"; };
+		975183D61774C24000FC860E /* VenmoBase64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VenmoBase64.m; sourceTree = "<group>"; };
+		975183D71774C24000FC860E /* VenmoBase64_Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VenmoBase64_Internal.h; sourceTree = "<group>"; };
+		975183D81774C24000FC860E /* VenmoClient_Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VenmoClient_Internal.h; sourceTree = "<group>"; };
+		975183D91774C24000FC860E /* VenmoClient_Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VenmoClient_Private.h; sourceTree = "<group>"; };
+		975183DA1774C24000FC860E /* VenmoDefines_Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VenmoDefines_Internal.h; sourceTree = "<group>"; };
+		975183DB1774C24000FC860E /* VenmoHMAC_SHA256.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VenmoHMAC_SHA256.m; sourceTree = "<group>"; };
+		975183DC1774C24000FC860E /* VenmoHMAC_SHA256_Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VenmoHMAC_SHA256_Internal.h; sourceTree = "<group>"; };
+		975183DD1774C24000FC860E /* VenmoTransaction_Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VenmoTransaction_Internal.h; sourceTree = "<group>"; };
+		975183DE1774C24000FC860E /* VenmoViewController_Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VenmoViewController_Internal.h; sourceTree = "<group>"; };
+		975183E01774C24000FC860E /* Venmo-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Venmo-Prefix.pch"; sourceTree = "<group>"; };
+		975183E11774C24000FC860E /* Venmo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Venmo.h; sourceTree = "<group>"; };
+		975183E21774C24000FC860E /* VenmoClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VenmoClient.h; sourceTree = "<group>"; };
+		975183E31774C24000FC860E /* VenmoClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VenmoClient.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		975183E41774C24000FC860E /* VenmoErrors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VenmoErrors.h; sourceTree = "<group>"; };
+		975183E51774C24000FC860E /* VenmoErrors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VenmoErrors.m; sourceTree = "<group>"; };
+		975183E61774C24000FC860E /* VenmoTransaction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VenmoTransaction.h; sourceTree = "<group>"; };
+		975183E71774C24000FC860E /* VenmoTransaction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VenmoTransaction.m; sourceTree = "<group>"; };
+		975183E81774C24000FC860E /* VenmoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VenmoViewController.h; sourceTree = "<group>"; };
+		975183E91774C24000FC860E /* VenmoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VenmoViewController.m; sourceTree = "<group>"; };
+		975183EA1774C24000FC860E /* Venmo.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Venmo.xcodeproj; path = Venmo/Venmo.xcodeproj; sourceTree = "<group>"; };
+		975183EF1774C24000FC860E /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		975183F01774C24000FC860E /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		975183F21774C24000FC860E /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		975183F31774C24000FC860E /* VenmoApp-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "VenmoApp-Info.plist"; sourceTree = "<group>"; };
+		975183F41774C24000FC860E /* VenmoApp-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "VenmoApp-Prefix.pch"; sourceTree = "<group>"; };
+		975183F51774C24000FC860E /* WelcomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WelcomeViewController.h; sourceTree = "<group>"; };
+		975183F61774C24000FC860E /* WelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WelcomeViewController.m; sourceTree = "<group>"; };
+		975183F81774C24000FC860E /* NSDictionarySpecs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDictionarySpecs.m; sourceTree = "<group>"; };
+		975183F91774C24000FC860E /* NSStringSpecs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSStringSpecs.m; sourceTree = "<group>"; };
+		975183FB1774C24000FC860E /* NSInvocation+SpecMethodPrefix.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSInvocation+SpecMethodPrefix.m"; sourceTree = "<group>"; };
+		975183FC1774C24000FC860E /* VenmoSpecs-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "VenmoSpecs-Prefix.pch"; sourceTree = "<group>"; };
+		975183FD1774C24000FC860E /* VenmoSpecs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VenmoSpecs.h; sourceTree = "<group>"; };
+		975183FE1774C24000FC860E /* VenmoSpecsSpecs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VenmoSpecsSpecs.m; sourceTree = "<group>"; };
+		975183FF1774C24000FC860E /* VenmoBase64Specs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VenmoBase64Specs.m; sourceTree = "<group>"; };
+		975184001774C24000FC860E /* VenmoClientSpecs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VenmoClientSpecs.m; sourceTree = "<group>"; };
+		975184011774C24000FC860E /* VenmoTransactionSpecs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VenmoTransactionSpecs.m; sourceTree = "<group>"; };
+		975184021774C24000FC860E /* VenmoViewControllerSpecs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VenmoViewControllerSpecs.m; sourceTree = "<group>"; };
+		9751842C1774C7A600FC860E /* libVenmo.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libVenmo.a; path = "../../Library/Developer/Xcode/DerivedData/KTCVenmo-djhvdnlqlwmckueqlmilcczdgqel/Build/Products/Debug-iphoneos/libVenmo.a"; sourceTree = "<group>"; };
+		975184341774CAB500FC860E /* KTCVenmoClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTCVenmoClient.h; sourceTree = "<group>"; };
+		975184351774CAB500FC860E /* KTCVenmoClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTCVenmoClient.m; sourceTree = "<group>"; };
 		97D0B191176B7A1B00B89CD6 /* KTCVenmo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KTCVenmo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		97D0B194176B7A1B00B89CD6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		97D0B196176B7A1B00B89CD6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -80,7 +141,6 @@
 		97D0B1E7176B9E5500B89CD6 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
 		97D0B1E8176B9E5500B89CD6 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		97D0B1EA176BBF9400B89CD6 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		97D0B2BD176BC18600B89CD6 /* Venmo.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = Venmo.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +148,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9751842D1774C7A600FC860E /* libVenmo.a in Frameworks */,
 				97D0B1EB176BBF9400B89CD6 /* Security.framework in Frameworks */,
 				97D0B1DC176B8EF500B89CD6 /* QuartzCore.framework in Frameworks */,
 				97D0B195176B7A1B00B89CD6 /* UIKit.framework in Frameworks */,
@@ -109,9 +170,158 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		975183C01774C24000FC860E /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				975183EA1774C24000FC860E /* Venmo.xcodeproj */,
+				975183C11774C24000FC860E /* Venmo */,
+			);
+			path = Libraries;
+			sourceTree = "<group>";
+		};
+		975183C11774C24000FC860E /* Venmo */ = {
+			isa = PBXGroup;
+			children = (
+				975183C21774C24000FC860E /* .gitignore */,
+				975183C31774C24000FC860E /* .gitmodules */,
+				975183C41774C24000FC860E /* Libraries */,
+				975183C71774C24000FC860E /* README.md */,
+				975183C81774C24000FC860E /* Venmo */,
+				975183EE1774C24000FC860E /* VenmoApp */,
+				975183F71774C24000FC860E /* VenmoSpecs */,
+			);
+			path = Venmo;
+			sourceTree = "<group>";
+		};
+		975183C41774C24000FC860E /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				975183C51774C24000FC860E /* JSONKit */,
+				975183C61774C24000FC860E /* Kiwi */,
+			);
+			path = Libraries;
+			sourceTree = "<group>";
+		};
+		975183C51774C24000FC860E /* JSONKit */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = JSONKit;
+			sourceTree = "<group>";
+		};
+		975183C61774C24000FC860E /* Kiwi */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Kiwi;
+			sourceTree = "<group>";
+		};
+		975183C81774C24000FC860E /* Venmo */ = {
+			isa = PBXGroup;
+			children = (
+				975183C91774C24000FC860E /* Private */,
+				975183DF1774C24000FC860E /* Supporting Files */,
+				975183E11774C24000FC860E /* Venmo.h */,
+				975183E21774C24000FC860E /* VenmoClient.h */,
+				975183E31774C24000FC860E /* VenmoClient.m */,
+				975183E41774C24000FC860E /* VenmoErrors.h */,
+				975183E51774C24000FC860E /* VenmoErrors.m */,
+				975183E61774C24000FC860E /* VenmoTransaction.h */,
+				975183E71774C24000FC860E /* VenmoTransaction.m */,
+				975183E81774C24000FC860E /* VenmoViewController.h */,
+				975183E91774C24000FC860E /* VenmoViewController.m */,
+			);
+			path = Venmo;
+			sourceTree = "<group>";
+		};
+		975183C91774C24000FC860E /* Private */ = {
+			isa = PBXGroup;
+			children = (
+				975183CA1774C24000FC860E /* NSBundle+Venmo.h */,
+				975183CB1774C24000FC860E /* NSBundle+Venmo.m */,
+				975183CC1774C24000FC860E /* NSDictionary+Venmo.h */,
+				975183CD1774C24000FC860E /* NSDictionary+Venmo.m */,
+				975183CE1774C24000FC860E /* NSError+Venmo.h */,
+				975183CF1774C24000FC860E /* NSError+Venmo.m */,
+				975183D01774C24000FC860E /* NSString+Venmo.h */,
+				975183D11774C24000FC860E /* NSString+Venmo.m */,
+				975183D21774C24000FC860E /* NSURL+Venmo.h */,
+				975183D31774C24000FC860E /* NSURL+Venmo.m */,
+				975183D41774C24000FC860E /* VenmoActivityView.m */,
+				975183D51774C24000FC860E /* VenmoActivityView_Internal.h */,
+				975183D61774C24000FC860E /* VenmoBase64.m */,
+				975183D71774C24000FC860E /* VenmoBase64_Internal.h */,
+				975183D81774C24000FC860E /* VenmoClient_Internal.h */,
+				975183D91774C24000FC860E /* VenmoClient_Private.h */,
+				975183DA1774C24000FC860E /* VenmoDefines_Internal.h */,
+				975183DB1774C24000FC860E /* VenmoHMAC_SHA256.m */,
+				975183DC1774C24000FC860E /* VenmoHMAC_SHA256_Internal.h */,
+				975183DD1774C24000FC860E /* VenmoTransaction_Internal.h */,
+				975183DE1774C24000FC860E /* VenmoViewController_Internal.h */,
+			);
+			path = Private;
+			sourceTree = "<group>";
+		};
+		975183DF1774C24000FC860E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				975183E01774C24000FC860E /* Venmo-Prefix.pch */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		975183EE1774C24000FC860E /* VenmoApp */ = {
+			isa = PBXGroup;
+			children = (
+				975183EF1774C24000FC860E /* AppDelegate.h */,
+				975183F01774C24000FC860E /* AppDelegate.m */,
+				975183F11774C24000FC860E /* Supporting Files */,
+				975183F51774C24000FC860E /* WelcomeViewController.h */,
+				975183F61774C24000FC860E /* WelcomeViewController.m */,
+			);
+			path = VenmoApp;
+			sourceTree = "<group>";
+		};
+		975183F11774C24000FC860E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				975183F21774C24000FC860E /* main.m */,
+				975183F31774C24000FC860E /* VenmoApp-Info.plist */,
+				975183F41774C24000FC860E /* VenmoApp-Prefix.pch */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		975183F71774C24000FC860E /* VenmoSpecs */ = {
+			isa = PBXGroup;
+			children = (
+				975183F81774C24000FC860E /* NSDictionarySpecs.m */,
+				975183F91774C24000FC860E /* NSStringSpecs.m */,
+				975183FA1774C24000FC860E /* Supporting Files */,
+				975183FF1774C24000FC860E /* VenmoBase64Specs.m */,
+				975184001774C24000FC860E /* VenmoClientSpecs.m */,
+				975184011774C24000FC860E /* VenmoTransactionSpecs.m */,
+				975184021774C24000FC860E /* VenmoViewControllerSpecs.m */,
+			);
+			path = VenmoSpecs;
+			sourceTree = "<group>";
+		};
+		975183FA1774C24000FC860E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				975183FB1774C24000FC860E /* NSInvocation+SpecMethodPrefix.m */,
+				975183FC1774C24000FC860E /* VenmoSpecs-Prefix.pch */,
+				975183FD1774C24000FC860E /* VenmoSpecs.h */,
+				975183FE1774C24000FC860E /* VenmoSpecsSpecs.m */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		97D0B188176B7A1B00B89CD6 = {
 			isa = PBXGroup;
 			children = (
+				9751842C1774C7A600FC860E /* libVenmo.a */,
+				975183C01774C24000FC860E /* Libraries */,
 				97D0B19A176B7A1B00B89CD6 /* KTCVenmo */,
 				97D0B1BE176B7A1B00B89CD6 /* KTCVenmoTests */,
 				97D0B193176B7A1B00B89CD6 /* Frameworks */,
@@ -131,7 +341,6 @@
 		97D0B193176B7A1B00B89CD6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				97D0B2B8176BC18600B89CD6 /* Libraries */,
 				97D0B1EA176BBF9400B89CD6 /* Security.framework */,
 				97D0B1DB176B8EF500B89CD6 /* QuartzCore.framework */,
 				97D0B194176B7A1B00B89CD6 /* UIKit.framework */,
@@ -148,6 +357,8 @@
 				97D0B1DD176B8F7800B89CD6 /* ViewDeck */,
 				97D0B1A3176B7A1B00B89CD6 /* AppDelegate.h */,
 				97D0B1A4176B7A1B00B89CD6 /* AppDelegate.m */,
+				975184341774CAB500FC860E /* KTCVenmoClient.h */,
+				975184351774CAB500FC860E /* KTCVenmoClient.m */,
 				97D0B1AC176B7A1B00B89CD6 /* MainStoryboard.storyboard */,
 				97D0B1D5176B7FB100B89CD6 /* EnterNumberViewController.h */,
 				97D0B1D6176B7FB100B89CD6 /* EnterNumberViewController.m */,
@@ -208,51 +419,6 @@
 			path = ViewDeck;
 			sourceTree = "<group>";
 		};
-		97D0B2B8176BC18600B89CD6 /* Libraries */ = {
-			isa = PBXGroup;
-			children = (
-				97D0B2B9176BC18600B89CD6 /* Venmo */,
-			);
-			path = Libraries;
-			sourceTree = SOURCE_ROOT;
-		};
-		97D0B2B9176BC18600B89CD6 /* Venmo */ = {
-			isa = PBXGroup;
-			children = (
-				97D0B2BA176BC18600B89CD6 /* Libraries */,
-				97D0B2BD176BC18600B89CD6 /* Venmo.xcodeproj */,
-			);
-			path = Venmo;
-			sourceTree = "<group>";
-		};
-		97D0B2BA176BC18600B89CD6 /* Libraries */ = {
-			isa = PBXGroup;
-			children = (
-				97D0B2BB176BC18600B89CD6 /* JSONKit */,
-				97D0B2BC176BC18600B89CD6 /* Kiwi */,
-			);
-			path = Libraries;
-			sourceTree = "<group>";
-		};
-		97D0B2BB176BC18600B89CD6 /* JSONKit */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = JSONKit;
-			sourceTree = "<group>";
-		};
-		97D0B2BC176BC18600B89CD6 /* Kiwi */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Kiwi;
-			sourceTree = "<group>";
-		};
-		97D0B2BE176BC18600B89CD6 /* Products */ = {
-			isa = PBXGroup;
-			name = Products;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -311,12 +477,6 @@
 			mainGroup = 97D0B188176B7A1B00B89CD6;
 			productRefGroup = 97D0B192176B7A1B00B89CD6 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 97D0B2BE176BC18600B89CD6 /* Products */;
-					ProjectRef = 97D0B2BD176BC18600B89CD6 /* Venmo.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				97D0B190176B7A1B00B89CD6 /* KTCVenmo */,
@@ -335,6 +495,10 @@
 				97D0B1A9176B7A1B00B89CD6 /* Default@2x.png in Resources */,
 				97D0B1AB176B7A1B00B89CD6 /* Default-568h@2x.png in Resources */,
 				97D0B1AE176B7A1B00B89CD6 /* MainStoryboard.storyboard in Resources */,
+				975184031774C24000FC860E /* .gitignore in Resources */,
+				975184041774C24000FC860E /* .gitmodules in Resources */,
+				975184051774C24000FC860E /* README.md in Resources */,
+				975184141774C24000FC860E /* VenmoApp-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -378,6 +542,7 @@
 				97D0B1E5176B8F7900B89CD6 /* IIViewDeckController.m in Sources */,
 				97D0B1E6176B8F7900B89CD6 /* IIWrapController.m in Sources */,
 				97D0B1E9176B9E5500B89CD6 /* SettingsViewController.m in Sources */,
+				975184361774CAB500FC860E /* KTCVenmoClient.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -488,7 +653,17 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "KTCVenmo/KTCVenmo-Prefix.pch";
+				HEADER_SEARCH_PATHS = Libraries/Venmo;
 				INFOPLIST_FILE = "KTCVenmo/KTCVenmo-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../Library/Developer/Xcode/DerivedData/KTCVenmo-djhvdnlqlwmckueqlmilcczdgqel/Build/Products/Debug-iphoneos\"",
+				);
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-force_load",
+					"${BUILT_PRODUCTS_DIR}/libVenmo.a",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -499,7 +674,17 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "KTCVenmo/KTCVenmo-Prefix.pch";
+				HEADER_SEARCH_PATHS = Libraries/Venmo;
 				INFOPLIST_FILE = "KTCVenmo/KTCVenmo-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../Library/Developer/Xcode/DerivedData/KTCVenmo-djhvdnlqlwmckueqlmilcczdgqel/Build/Products/Debug-iphoneos\"",
+				);
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-force_load",
+					"${BUILT_PRODUCTS_DIR}/libVenmo.a",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -558,6 +743,7 @@
 				97D0B1CB176B7A1B00B89CD6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		97D0B1CC176B7A1B00B89CD6 /* Build configuration list for PBXNativeTarget "KTCVenmoTests" */ = {
 			isa = XCConfigurationList;
@@ -566,6 +752,7 @@
 				97D0B1CE176B7A1B00B89CD6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
