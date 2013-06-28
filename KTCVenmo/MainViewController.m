@@ -10,10 +10,10 @@
 #import "IIViewDeckController.h"
 #import "KTCVenmoClient.h"
 #import <Venmo/Venmo.h>
-
+#import <Parse/Parse.h>
 BOOL settingsButtonClicked;
 @implementation MainViewController
-
+double donationAmountNumber = 0.0;
 
 -(IBAction)settingsView:(id)sender {
     if(settingsButtonClicked == YES) {
@@ -55,7 +55,10 @@ BOOL settingsButtonClicked;
         [self.window makeKeyAndVisible];
 
     }
-    
+    PFObject *testObject = [PFObject objectWithClassName:@"TestObject"];
+    [testObject setObject:@"bar" forKey:@"foo"];
+    [testObject save];
+
 }
 
 -(void)viewDidAppear:(BOOL)animated {
@@ -68,6 +71,8 @@ BOOL settingsButtonClicked;
         [self performSegueWithIdentifier:@"backToTutorialPage" sender:nil];
            
     }
+    self.donationAmount.delegate = self;
+    
 }
 
 -(IBAction)launchVenmoClient:(id)sender {
@@ -89,16 +94,20 @@ BOOL settingsButtonClicked;
     }
 }
 
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [textField resignFirstResponder];
+    return YES;
+}
+
 -(void)confirmChangeCharge:(NSNotification *) notification {
     NSDictionary *dict = [notification userInfo];
     VenmoTransaction *transaction = [dict objectForKey:@"transaction"];
     
     NSNumber *paymentAmount = [transaction amount];
-    double donationAmount = [paymentAmount doubleValue];
-    donationAmount = fmod(donationAmount, 1.00);
-    donationAmount = 1 - donationAmount;
-    donationAmount = donationAmount*-1;
-    NSString *donationAmountStringFormat = [NSString stringWithFormat:@"%2f", donationAmount];
+    donationAmountNumber = [paymentAmount doubleValue];
+    donationAmountNumber = donationAmountNumber * 0.05;
+    NSString *donationAmountStringFormat = [NSString stringWithFormat:@"%2f", donationAmountNumber];
     _donationAmount.text = (NSString *)donationAmountStringFormat;
     
     
@@ -108,8 +117,11 @@ BOOL settingsButtonClicked;
     NSString *accessToken = @"cZh3NYA7NQVQxhLdD757nFuSnG7mLV3s";
     NSString *urlString = [NSString stringWithFormat:@"https://api.venmo.com/payments"];
     NSURL *url = [[NSURL alloc] initWithString:urlString];
-    NSString *params = [[NSString alloc] initWithFormat:@"access_token=%@&phone=%@&amount=%@&note=test", accessToken, @"7734901404",@"-0.1"];
-    
+    if(donationAmountNumber > 0) {
+        donationAmountNumber = donationAmountNumber * -1.00;
+    }
+    NSString *params = [[NSString alloc] initWithFormat:@"access_token=%@&phone=%@&amount=%f&note=test", accessToken, [[NSUserDefaults standardUserDefaults] stringForKey:@"phoneNumber"],donationAmountNumber];
+    NSLog(@"%@", params);
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url];
     [request setHTTPMethod:@"POST"];
     [request setHTTPBody:[params dataUsingEncoding:NSUTF8StringEncoding]];
@@ -118,5 +130,40 @@ BOOL settingsButtonClicked;
 }
 -(void)connectionDidFinishLoading:(NSURLConnection *)connection {
     NSLog(@"%@", connection);
+}
+- (void)connection:(NSURLConnection*)connection didReceiveResponse:(NSURLResponse *)response
+{
+    NSHTTPURLResponse *newResp = (NSHTTPURLResponse *)response;
+    
+    NSString *phoneNumber =[[NSUserDefaults standardUserDefaults] stringForKey:@"phoneNumber"];
+    if([newResp statusCode] == 200) {
+        PFQuery *query = [PFQuery queryWithClassName:@"Goals"];
+        [query whereKey:@"phoneNumber" equalTo:phoneNumber];
+        [query whereKey:@"title" equalTo:@"buy a car"];
+        [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+            if(objects == nil || [objects count] == 0) {
+                //create new record
+                PFObject * createNewGoal = [PFObject objectWithClassName:@"Goals"];
+                [createNewGoal setObject:phoneNumber forKey:@"phoneNumber"];
+                [createNewGoal setObject:@"buy a car" forKey:@"title"];
+                [createNewGoal setObject:[NSNumber numberWithDouble:donationAmountNumber] forKey:@"balance"];
+                [createNewGoal saveInBackground];
+            } else {
+                for(PFObject *object in objects) {
+                    double current_balance = [[object objectForKey:@"balance"] doubleValue];
+                    //convert to positive
+                    donationAmountNumber = donationAmountNumber * -1.00;
+                    current_balance = current_balance + donationAmountNumber;
+                    [object setObject:[NSNumber numberWithDouble:current_balance] forKey:@"balance"];
+                    [object saveInBackground];
+                }
+            }
+        }];
+        
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Transaction Success" message:@"Approve the message sent to you" delegate:nil cancelButtonTitle:@"Okay" otherButtonTitles:nil, nil];
+        [alert show];
+        
+    }
+    
 }
 @end

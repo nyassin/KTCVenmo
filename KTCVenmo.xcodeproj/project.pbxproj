@@ -13,9 +13,23 @@
 		975184141774C24000FC860E /* VenmoApp-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 975183F31774C24000FC860E /* VenmoApp-Info.plist */; };
 		9751842D1774C7A600FC860E /* libVenmo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9751842C1774C7A600FC860E /* libVenmo.a */; };
 		975184361774CAB500FC860E /* KTCVenmoClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 975184351774CAB500FC860E /* KTCVenmoClient.m */; };
+		97B506CD177E18C000C94096 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97B506CC177E18C000C94096 /* Parse.framework */; };
+		97B506D2177E18DB00C94096 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97B506D1177E18DB00C94096 /* AudioToolbox.framework */; };
+		97B506D4177E18E100C94096 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97B506D3177E18E100C94096 /* CFNetwork.framework */; };
+		97B506D6177E18EF00C94096 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97B506D5177E18EF00C94096 /* CoreLocation.framework */; };
+		97B506D8177E18F700C94096 /* libz.1.1.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 97B506D7177E18F700C94096 /* libz.1.1.3.dylib */; };
+		97B506DA177E18FE00C94096 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97B506D9177E18FE00C94096 /* MobileCoreServices.framework */; };
+		97B506DC177E191700C94096 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97B506DB177E191700C94096 /* StoreKit.framework */; };
+		97B506DE177E191E00C94096 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97B506DD177E191E00C94096 /* SystemConfiguration.framework */; };
+		97B506E0177E19B700C94096 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 97B506DF177E19B700C94096 /* libsqlite3.0.dylib */; };
+		97B506E6177E1A7D00C94096 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97D0B198176B7A1B00B89CD6 /* CoreGraphics.framework */; };
+		97B506EA177E1C5B00C94096 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97B506E9177E1C5B00C94096 /* FacebookSDK.framework */; };
+		97B506EC177E1C8400C94096 /* FacebookSDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 97B506EB177E1C8400C94096 /* FacebookSDKResources.bundle */; };
+		97B506EE177E1CB300C94096 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97B506ED177E1CB300C94096 /* AdSupport.framework */; };
+		97B506F0177E1CC400C94096 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97B506EF177E1CC400C94096 /* Social.framework */; };
+		97B506F2177E1F0400C94096 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97B506F1177E1F0400C94096 /* Accounts.framework */; };
 		97D0B195176B7A1B00B89CD6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97D0B194176B7A1B00B89CD6 /* UIKit.framework */; };
 		97D0B197176B7A1B00B89CD6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97D0B196176B7A1B00B89CD6 /* Foundation.framework */; };
-		97D0B199176B7A1B00B89CD6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97D0B198176B7A1B00B89CD6 /* CoreGraphics.framework */; };
 		97D0B19F176B7A1B00B89CD6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 97D0B19D176B7A1B00B89CD6 /* InfoPlist.strings */; };
 		97D0B1A1176B7A1B00B89CD6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 97D0B1A0176B7A1B00B89CD6 /* main.m */; };
 		97D0B1A5176B7A1B00B89CD6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 97D0B1A4176B7A1B00B89CD6 /* AppDelegate.m */; };
@@ -40,6 +54,27 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		97B506B1177BA03500C94096 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 975183EA1774C24000FC860E /* Venmo.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C9BD6C6A13EEE06400F4D8F4;
+			remoteInfo = Venmo;
+		};
+		97B506B3177BA03500C94096 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 975183EA1774C24000FC860E /* Venmo.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C9550E7613F5C48900212008;
+			remoteInfo = VenmoApp;
+		};
+		97B506B5177BA03500C94096 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 975183EA1774C24000FC860E /* Venmo.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C9BD6C7A13EEE06400F4D8F4;
+			remoteInfo = VenmoSpecs;
+		};
 		97D0B1BC176B7A1B00B89CD6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 97D0B189176B7A1B00B89CD6 /* Project object */;
@@ -105,6 +140,21 @@
 		9751842C1774C7A600FC860E /* libVenmo.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libVenmo.a; path = "../../Library/Developer/Xcode/DerivedData/KTCVenmo-djhvdnlqlwmckueqlmilcczdgqel/Build/Products/Debug-iphoneos/libVenmo.a"; sourceTree = "<group>"; };
 		975184341774CAB500FC860E /* KTCVenmoClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTCVenmoClient.h; sourceTree = "<group>"; };
 		975184351774CAB500FC860E /* KTCVenmoClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTCVenmoClient.m; sourceTree = "<group>"; };
+		97B506CC177E18C000C94096 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		97B506D1177E18DB00C94096 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		97B506D3177E18E100C94096 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		97B506D5177E18EF00C94096 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		97B506D7177E18F700C94096 /* libz.1.1.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.1.3.dylib; path = usr/lib/libz.1.1.3.dylib; sourceTree = SDKROOT; };
+		97B506D9177E18FE00C94096 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		97B506DB177E191700C94096 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		97B506DD177E191E00C94096 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		97B506DF177E19B700C94096 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
+		97B506E7177E1C1900C94096 /* facebook-ios-sdk-3.5.3.pkg */ = {isa = PBXFileReference; lastKnownFileType = file; name = "facebook-ios-sdk-3.5.3.pkg"; path = "../../Downloads/facebook-ios-sdk-3.5.3.pkg"; sourceTree = "<group>"; };
+		97B506E9177E1C5B00C94096 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
+		97B506EB177E1C8400C94096 /* FacebookSDKResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = FacebookSDKResources.bundle; path = ../FacebookSDK/FacebookSDK.framework/Versions/A/Resources/FacebookSDKResources.bundle; sourceTree = "<group>"; };
+		97B506ED177E1CB300C94096 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		97B506EF177E1CC400C94096 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		97B506F1177E1F0400C94096 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		97D0B191176B7A1B00B89CD6 /* KTCVenmo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KTCVenmo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		97D0B194176B7A1B00B89CD6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		97D0B196176B7A1B00B89CD6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -148,12 +198,25 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9751842D1774C7A600FC860E /* libVenmo.a in Frameworks */,
+				97B506F2177E1F0400C94096 /* Accounts.framework in Frameworks */,
+				97D0B197176B7A1B00B89CD6 /* Foundation.framework in Frameworks */,
+				97B506F0177E1CC400C94096 /* Social.framework in Frameworks */,
+				97D0B195176B7A1B00B89CD6 /* UIKit.framework in Frameworks */,
+				97B506EE177E1CB300C94096 /* AdSupport.framework in Frameworks */,
+				97B506E6177E1A7D00C94096 /* CoreGraphics.framework in Frameworks */,
+				97B506E0177E19B700C94096 /* libsqlite3.0.dylib in Frameworks */,
+				97B506DE177E191E00C94096 /* SystemConfiguration.framework in Frameworks */,
+				97B506DC177E191700C94096 /* StoreKit.framework in Frameworks */,
 				97D0B1EB176BBF9400B89CD6 /* Security.framework in Frameworks */,
 				97D0B1DC176B8EF500B89CD6 /* QuartzCore.framework in Frameworks */,
-				97D0B195176B7A1B00B89CD6 /* UIKit.framework in Frameworks */,
-				97D0B197176B7A1B00B89CD6 /* Foundation.framework in Frameworks */,
-				97D0B199176B7A1B00B89CD6 /* CoreGraphics.framework in Frameworks */,
+				97B506DA177E18FE00C94096 /* MobileCoreServices.framework in Frameworks */,
+				97B506D8177E18F700C94096 /* libz.1.1.3.dylib in Frameworks */,
+				97B506D6177E18EF00C94096 /* CoreLocation.framework in Frameworks */,
+				97B506D4177E18E100C94096 /* CFNetwork.framework in Frameworks */,
+				97B506D2177E18DB00C94096 /* AudioToolbox.framework in Frameworks */,
+				9751842D1774C7A600FC860E /* libVenmo.a in Frameworks */,
+				97B506CD177E18C000C94096 /* Parse.framework in Frameworks */,
+				97B506EA177E1C5B00C94096 /* FacebookSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,9 +380,31 @@
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		97B506AC177BA03500C94096 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				97B506B2177BA03500C94096 /* libVenmo.a */,
+				97B506B4177BA03500C94096 /* VenmoApp.app */,
+				97B506B6177BA03500C94096 /* VenmoSpecs.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		97D0B188176B7A1B00B89CD6 = {
 			isa = PBXGroup;
 			children = (
+				97B506F1177E1F0400C94096 /* Accounts.framework */,
+				97B506EF177E1CC400C94096 /* Social.framework */,
+				97B506ED177E1CB300C94096 /* AdSupport.framework */,
+				97B506E7177E1C1900C94096 /* facebook-ios-sdk-3.5.3.pkg */,
+				97B506DF177E19B700C94096 /* libsqlite3.0.dylib */,
+				97B506DD177E191E00C94096 /* SystemConfiguration.framework */,
+				97B506DB177E191700C94096 /* StoreKit.framework */,
+				97B506D9177E18FE00C94096 /* MobileCoreServices.framework */,
+				97B506D7177E18F700C94096 /* libz.1.1.3.dylib */,
+				97B506D5177E18EF00C94096 /* CoreLocation.framework */,
+				97B506D3177E18E100C94096 /* CFNetwork.framework */,
+				97B506D1177E18DB00C94096 /* AudioToolbox.framework */,
 				9751842C1774C7A600FC860E /* libVenmo.a */,
 				975183C01774C24000FC860E /* Libraries */,
 				97D0B19A176B7A1B00B89CD6 /* KTCVenmo */,
@@ -341,6 +426,9 @@
 		97D0B193176B7A1B00B89CD6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				97B506EB177E1C8400C94096 /* FacebookSDKResources.bundle */,
+				97B506E9177E1C5B00C94096 /* FacebookSDK.framework */,
+				97B506CC177E18C000C94096 /* Parse.framework */,
 				97D0B1EA176BBF9400B89CD6 /* Security.framework */,
 				97D0B1DB176B8EF500B89CD6 /* QuartzCore.framework */,
 				97D0B194176B7A1B00B89CD6 /* UIKit.framework */,
@@ -367,8 +455,8 @@
 				97D0B1AF176B7A1B00B89CD6 /* TutorialViewController.h */,
 				97D0B1B0176B7A1B00B89CD6 /* TutorialViewController.m */,
 				97D0B19B176B7A1B00B89CD6 /* Supporting Files */,
-				97D0B1E7176B9E5500B89CD6 /* SettingsViewController.h */,
 				97D0B1E8176B9E5500B89CD6 /* SettingsViewController.m */,
+				97D0B1E7176B9E5500B89CD6 /* SettingsViewController.h */,
 			);
 			path = KTCVenmo;
 			sourceTree = "<group>";
@@ -477,6 +565,12 @@
 			mainGroup = 97D0B188176B7A1B00B89CD6;
 			productRefGroup = 97D0B192176B7A1B00B89CD6 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 97B506AC177BA03500C94096 /* Products */;
+					ProjectRef = 975183EA1774C24000FC860E /* Venmo.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				97D0B190176B7A1B00B89CD6 /* KTCVenmo */,
@@ -484,6 +578,30 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		97B506B2177BA03500C94096 /* libVenmo.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libVenmo.a;
+			remoteRef = 97B506B1177BA03500C94096 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		97B506B4177BA03500C94096 /* VenmoApp.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = VenmoApp.app;
+			remoteRef = 97B506B3177BA03500C94096 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		97B506B6177BA03500C94096 /* VenmoSpecs.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = VenmoSpecs.octest;
+			remoteRef = 97B506B5177BA03500C94096 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		97D0B18F176B7A1B00B89CD6 /* Resources */ = {
@@ -499,6 +617,7 @@
 				975184041774C24000FC860E /* .gitmodules in Resources */,
 				975184051774C24000FC860E /* README.md in Resources */,
 				975184141774C24000FC860E /* VenmoApp-Info.plist in Resources */,
+				97B506EC177E1C8400C94096 /* FacebookSDKResources.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -651,6 +770,11 @@
 		97D0B1CA176B7A1B00B89CD6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+					"\"$(SRCROOT)/../FacebookSDK\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "KTCVenmo/KTCVenmo-Prefix.pch";
 				HEADER_SEARCH_PATHS = Libraries/Venmo;
@@ -672,6 +796,11 @@
 		97D0B1CB176B7A1B00B89CD6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+					"\"$(SRCROOT)/../FacebookSDK\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "KTCVenmo/KTCVenmo-Prefix.pch";
 				HEADER_SEARCH_PATHS = Libraries/Venmo;

@@ -8,6 +8,7 @@
 
 #import "SettingsViewController.h"
 #import "IIViewDeckController.h"
+#import <Parse/Parse.h>
 @interface SettingsViewController ()
 
 @end
@@ -27,12 +28,25 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    PFQuery *query = [PFQuery queryWithClassName:@"Goals"];
+    [query whereKey:@"phoneNumber" equalTo:[[NSUserDefaults standardUserDefaults] stringForKey:@"phoneNumber"]];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        for(PFObject *object in objects) {
+            
+            _goalName.text = [object objectForKey:@"title"];
+            
+        }
+    }];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(IBAction)logAllParseGoalsForNumberInUserDefaults:(id)sender {
+
 }
 
 -(IBAction)removePhoneNumberAndLogOut:(id)sender {

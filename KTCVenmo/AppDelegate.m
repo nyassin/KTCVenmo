@@ -11,11 +11,16 @@
 #import "MainViewController.h"
 #import "SettingsViewController.h"
 #import "KTCVenmoClient.h"
+#import <Parse/Parse.h>
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [Parse setApplicationId:@"LR1RxYwlrcLpIg8PDp9jQx3d4lhzK3bWT0k2uhky"
+                  clientKey:@"GHREEB2N4NYYFagobYVoDgy0VJS6PaKNVtPkV2Ga"];
+    [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
+
     // Override point for customization after application launch.
 
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
@@ -33,6 +38,8 @@
     self.window.rootViewController = deckController;
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    
+
     return YES;
     
 }

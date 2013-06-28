@@ -10,5 +10,8 @@
 
 @interface SettingsViewController : UIViewController
 
+@property (strong, nonatomic) IBOutlet UILabel *goalName;
+-(IBAction)logAllParseGoalsForNumberInUserDefaults:(id)sender;
+
 -(IBAction)removePhoneNumberAndLogOut:(id)sender;
 @end

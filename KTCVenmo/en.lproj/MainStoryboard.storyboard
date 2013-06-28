@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12D78" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="nFH-Yy-R8s">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="nFH-Yy-R8s">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
@@ -48,7 +48,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-249" y="-886"/>
+            <point key="canvasLocation" x="-541" y="-472"/>
         </scene>
         <!--Enter Number View Controller-->
         <scene sceneID="pMz-cP-eZt">
@@ -111,7 +111,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jZc-Hb-DY0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="246" y="-886"/>
+            <point key="canvasLocation" x="-118" y="-472"/>
         </scene>
         <!--Main View Controller-->
         <scene sceneID="Fhp-AO-WsN">
@@ -152,12 +152,13 @@
                                     <action selector="launchVenmoClient:" destination="nFH-Yy-R8s" eventType="touchUpInside" id="2vb-De-DGc"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VBl-xS-ard">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VBl-xS-ard">
                                 <constraints>
                                     <constraint firstAttribute="width" constant="81" id="Kek-mg-qfa"/>
+                                    <constraint firstAttribute="height" constant="30" id="kw9-9S-51o"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                             </textField>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="To" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qwL-pL-1ul">
                                 <constraints>
@@ -231,7 +232,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hn7-7D-D58" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="220" y="-118"/>
+            <point key="canvasLocation" x="436" y="-496"/>
         </scene>
         <!--Settings View Controller-->
         <scene sceneID="OmO-sc-L4J">
@@ -264,20 +265,38 @@
                                     <segue destination="2" kind="modal" identifier="signOut" id="4IH-YC-wAO"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pry-KZ-i02">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Get Logged Data">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="logAllParseGoalsForNumberInUserDefaults:" destination="3PZ-sK-Z64" eventType="touchUpInside" id="H7C-VR-gaE"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="DOX-L2-P9u" firstAttribute="centerX" secondItem="rv5-NC-FbT" secondAttribute="centerX" type="default" id="P7p-Bc-6hJ"/>
-                            <constraint firstItem="rv5-NC-FbT" firstAttribute="top" secondItem="M9n-RZ-5Aj" secondAttribute="top" constant="228" id="VRD-fl-EIx"/>
-                            <constraint firstItem="DOX-L2-P9u" firstAttribute="top" secondItem="M9n-RZ-5Aj" secondAttribute="top" constant="206" id="oIn-bj-JCu"/>
-                            <constraint firstItem="DOX-L2-P9u" firstAttribute="leading" secondItem="M9n-RZ-5Aj" secondAttribute="leading" constant="82" id="wEv-ms-WUf"/>
+                            <constraint firstItem="DOX-L2-P9u" firstAttribute="leading" secondItem="M9n-RZ-5Aj" secondAttribute="leading" constant="82" id="BCJ-Wk-dcp"/>
+                            <constraint firstItem="DOX-L2-P9u" firstAttribute="top" secondItem="M9n-RZ-5Aj" secondAttribute="top" constant="64" id="D1O-ZO-2EC"/>
+                            <constraint firstItem="DOX-L2-P9u" firstAttribute="trailing" secondItem="rv5-NC-FbT" secondAttribute="trailing" type="default" id="EvC-Ge-Xtz"/>
+                            <constraint firstItem="pry-KZ-i02" firstAttribute="centerX" secondItem="rv5-NC-FbT" secondAttribute="centerX" type="default" id="If8-3H-BBL"/>
+                            <constraint firstAttribute="bottom" secondItem="pry-KZ-i02" secondAttribute="bottom" constant="107" id="PAQ-3B-VHh"/>
+                            <constraint firstAttribute="bottom" secondItem="rv5-NC-FbT" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="jZO-gg-cgz"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="goalName" destination="DOX-L2-P9u" id="nxK-jN-hbr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HCP-cX-ihP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-267" y="-108"/>
+            <point key="canvasLocation" x="-1003" y="-472"/>
         </scene>
     </scenes>
     <classes>
@@ -304,7 +323,9 @@
         <class className="SettingsViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/SettingsViewController.h"/>
             <relationships>
+                <relationship kind="action" name="logAllParseGoalsForNumberInUserDefaults:"/>
                 <relationship kind="action" name="removePhoneNumberAndLogOut:"/>
+                <relationship kind="outlet" name="goalName" candidateClass="UILabel"/>
             </relationships>
         </class>
         <class className="TutorialViewController" superclassName="UIViewController">
@@ -320,6 +341,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="cvX-X5-XhZ"/>
+        <segue reference="4IH-YC-wAO"/>
     </inferredMetricsTieBreakers>
 </document>
