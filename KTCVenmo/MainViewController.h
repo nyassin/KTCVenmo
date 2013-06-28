@@ -16,7 +16,7 @@
 @property (strong, nonatomic) VenmoClient *venmoClient;
 
 
-
+-(IBAction)chooseGoal:(id)sender;
 -(IBAction)completeCharge:(id)sender;
 -(IBAction)launchVenmoClient:(id)sender;
 -(IBAction)settingsView:(id)sender;

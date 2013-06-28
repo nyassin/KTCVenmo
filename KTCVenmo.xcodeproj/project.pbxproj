@@ -28,6 +28,7 @@
 		97B506EE177E1CB300C94096 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97B506ED177E1CB300C94096 /* AdSupport.framework */; };
 		97B506F0177E1CC400C94096 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97B506EF177E1CC400C94096 /* Social.framework */; };
 		97B506F2177E1F0400C94096 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97B506F1177E1F0400C94096 /* Accounts.framework */; };
+		97B506F5177E3BF500C94096 /* GoalsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97B506F4177E3BF500C94096 /* GoalsViewController.m */; };
 		97D0B195176B7A1B00B89CD6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97D0B194176B7A1B00B89CD6 /* UIKit.framework */; };
 		97D0B197176B7A1B00B89CD6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97D0B196176B7A1B00B89CD6 /* Foundation.framework */; };
 		97D0B19F176B7A1B00B89CD6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 97D0B19D176B7A1B00B89CD6 /* InfoPlist.strings */; };
@@ -155,6 +156,8 @@
 		97B506ED177E1CB300C94096 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		97B506EF177E1CC400C94096 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		97B506F1177E1F0400C94096 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		97B506F3177E3BF500C94096 /* GoalsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoalsViewController.h; sourceTree = "<group>"; };
+		97B506F4177E3BF500C94096 /* GoalsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoalsViewController.m; sourceTree = "<group>"; };
 		97D0B191176B7A1B00B89CD6 /* KTCVenmo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KTCVenmo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		97D0B194176B7A1B00B89CD6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		97D0B196176B7A1B00B89CD6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -454,6 +457,8 @@
 				97D0B1D3176B7E7900B89CD6 /* MainViewController.m */,
 				97D0B1AF176B7A1B00B89CD6 /* TutorialViewController.h */,
 				97D0B1B0176B7A1B00B89CD6 /* TutorialViewController.m */,
+				97B506F3177E3BF500C94096 /* GoalsViewController.h */,
+				97B506F4177E3BF500C94096 /* GoalsViewController.m */,
 				97D0B19B176B7A1B00B89CD6 /* Supporting Files */,
 				97D0B1E8176B9E5500B89CD6 /* SettingsViewController.m */,
 				97D0B1E7176B9E5500B89CD6 /* SettingsViewController.h */,
@@ -662,6 +667,7 @@
 				97D0B1E6176B8F7900B89CD6 /* IIWrapController.m in Sources */,
 				97D0B1E9176B9E5500B89CD6 /* SettingsViewController.m in Sources */,
 				975184361774CAB500FC860E /* KTCVenmoClient.m in Sources */,
+				97B506F5177E3BF500C94096 /* GoalsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

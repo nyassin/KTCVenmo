@@ -158,7 +158,7 @@
                                     <constraint firstAttribute="height" constant="30" id="kw9-9S-51o"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad" returnKeyType="done"/>
                             </textField>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="To" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qwL-pL-1ul">
                                 <constraints>
@@ -181,6 +181,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="chooseGoal:" destination="nFH-Yy-R8s" eventType="touchUpInside" id="7Yr-sI-CLY"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WjU-5K-OYg">
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -210,14 +213,15 @@
                             <constraint firstItem="WjU-5K-OYg" firstAttribute="centerX" secondItem="ugD-FF-qr3" secondAttribute="centerX" type="default" id="EVa-yd-itI"/>
                             <constraint firstItem="rPq-KD-VUm" firstAttribute="trailing" secondItem="MQa-ak-3Cf" secondAttribute="trailing" type="default" id="Eq6-J2-XWu"/>
                             <constraint firstItem="MGc-dI-5tR" firstAttribute="baseline" secondItem="qwL-pL-1ul" secondAttribute="baseline" type="default" id="Foq-KF-vwF"/>
-                            <constraint firstItem="MGc-dI-5tR" firstAttribute="trailing" secondItem="VBl-xS-ard" secondAttribute="trailing" type="default" id="QYI-xZ-MxB"/>
+                            <constraint firstItem="VBl-xS-ard" firstAttribute="leading" secondItem="MQa-ak-3Cf" secondAttribute="leading" constant="145" id="FuY-Yk-jsC"/>
                             <constraint firstItem="ay6-i7-SHA" firstAttribute="baseline" secondItem="VBl-xS-ard" secondAttribute="baseline" type="default" id="Urn-cZ-Xx4"/>
                             <constraint firstAttribute="bottom" secondItem="MGc-dI-5tR" secondAttribute="bottom" constant="185" id="VwL-aQ-cvY"/>
                             <constraint firstItem="rPq-KD-VUm" firstAttribute="top" secondItem="MQa-ak-3Cf" secondAttribute="top" type="default" id="XCb-bS-tKM"/>
                             <constraint firstItem="IWT-MS-9s8" firstAttribute="centerX" secondItem="rPq-KD-VUm" secondAttribute="centerX" type="default" id="b5P-xX-42K"/>
+                            <constraint firstItem="VBl-xS-ard" firstAttribute="bottom" secondItem="ay6-i7-SHA" secondAttribute="bottom" type="default" id="bQz-4o-yDD"/>
+                            <constraint firstItem="VBl-xS-ard" firstAttribute="top" secondItem="MQa-ak-3Cf" secondAttribute="top" constant="160" id="dWy-A5-sAD"/>
                             <constraint firstItem="IWT-MS-9s8" firstAttribute="centerX" secondItem="ugD-FF-qr3" secondAttribute="centerX" type="default" id="eQl-M8-YYH"/>
                             <constraint firstItem="MGc-dI-5tR" firstAttribute="top" secondItem="qwL-pL-1ul" secondAttribute="top" type="default" id="eaP-4k-IY7"/>
-                            <constraint firstItem="VBl-xS-ard" firstAttribute="top" secondItem="MQa-ak-3Cf" secondAttribute="top" constant="166" id="fWR-Ua-Kyc"/>
                             <constraint firstItem="IWT-MS-9s8" firstAttribute="top" secondItem="MQa-ak-3Cf" secondAttribute="top" constant="50" id="pdq-Af-4UJ"/>
                             <constraint firstItem="ay6-i7-SHA" firstAttribute="leading" secondItem="MQa-ak-3Cf" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="wVl-C6-D2Y"/>
                             <constraint firstItem="qwL-pL-1ul" firstAttribute="leading" secondItem="MQa-ak-3Cf" secondAttribute="leading" constant="30" id="xOL-Sg-UXP"/>
@@ -232,7 +236,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hn7-7D-D58" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="436" y="-496"/>
+            <point key="canvasLocation" x="282" y="-472"/>
         </scene>
         <!--Settings View Controller-->
         <scene sceneID="OmO-sc-L4J">
@@ -310,6 +314,7 @@
         <class className="MainViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/MainViewController.h"/>
             <relationships>
+                <relationship kind="action" name="chooseGoal:"/>
                 <relationship kind="action" name="completeCharge:"/>
                 <relationship kind="action" name="launchVenmoClient:"/>
                 <relationship kind="action" name="settingsView:"/>
@@ -341,6 +346,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="4IH-YC-wAO"/>
+        <segue reference="cvX-X5-XhZ"/>
     </inferredMetricsTieBreakers>
 </document>

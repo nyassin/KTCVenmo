@@ -11,6 +11,7 @@
 #import "KTCVenmoClient.h"
 #import <Venmo/Venmo.h>
 #import <Parse/Parse.h>
+#import "GoalsViewController.h"
 BOOL settingsButtonClicked;
 @implementation MainViewController
 double donationAmountNumber = 0.0;
@@ -60,6 +61,10 @@ double donationAmountNumber = 0.0;
     [testObject save];
 
 }
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
+    //Iterate through your subviews, or some other custom array of views
+        [_donationAmount resignFirstResponder];
+}
 
 -(void)viewDidAppear:(BOOL)animated {
    
@@ -75,6 +80,13 @@ double donationAmountNumber = 0.0;
     
 }
 
+-(IBAction)chooseGoal:(id)sender {
+    GoalsViewController *goalsView = [[GoalsViewController alloc] init];
+    UINavigationController *navigationController = [[UINavigationController alloc]
+                                                    initWithRootViewController:goalsView];
+    [self presentViewController:navigationController animated:YES completion: nil];
+
+}
 -(IBAction)launchVenmoClient:(id)sender {
     _venmoClient = [KTCVenmoClient sharedVenmoClient];
     VenmoTransaction *transaction = [[VenmoTransaction alloc] init];
@@ -137,6 +149,7 @@ double donationAmountNumber = 0.0;
     
     NSString *phoneNumber =[[NSUserDefaults standardUserDefaults] stringForKey:@"phoneNumber"];
     if([newResp statusCode] == 200) {
+        donationAmountNumber = donationAmountNumber * -1.00;
         PFQuery *query = [PFQuery queryWithClassName:@"Goals"];
         [query whereKey:@"phoneNumber" equalTo:phoneNumber];
         [query whereKey:@"title" equalTo:@"buy a car"];
@@ -151,8 +164,6 @@ double donationAmountNumber = 0.0;
             } else {
                 for(PFObject *object in objects) {
                     double current_balance = [[object objectForKey:@"balance"] doubleValue];
-                    //convert to positive
-                    donationAmountNumber = donationAmountNumber * -1.00;
                     current_balance = current_balance + donationAmountNumber;
                     [object setObject:[NSNumber numberWithDouble:current_balance] forKey:@"balance"];
                     [object saveInBackground];

@@ -9,6 +9,7 @@
 #import "SettingsViewController.h"
 #import "IIViewDeckController.h"
 #import <Parse/Parse.h>
+#import "GoalsViewController.h"
 @interface SettingsViewController ()
 
 @end
@@ -46,7 +47,10 @@
 }
 
 -(IBAction)logAllParseGoalsForNumberInUserDefaults:(id)sender {
-
+    GoalsViewController *goalsView = [[GoalsViewController alloc] init];
+    UINavigationController *navigationController = [[UINavigationController alloc]
+                                                    initWithRootViewController:goalsView];
+    [self presentViewController:navigationController animated:YES completion: nil];
 }
 
 -(IBAction)removePhoneNumberAndLogOut:(id)sender {
